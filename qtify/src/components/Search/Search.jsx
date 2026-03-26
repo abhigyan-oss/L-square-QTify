@@ -38,7 +38,6 @@ const Listbox = styled("ul")(({ theme }) => ({
 function Search({ searchData, placeholder }) {
   const {
     getRootProps,
-    getInputLabelProps,
     value,
     getInputProps,
     getListboxProps,
@@ -51,11 +50,10 @@ function Search({ searchData, placeholder }) {
   });
 
   const navigate = useNavigate();
+
   const onSubmit = (e, value) => {
     e.preventDefault();
-    console.log(value);
     navigate(`/album/${value.slug}`);
-    //Process form data, call API, set state etc.
   };
 
   return (
@@ -81,10 +79,10 @@ function Search({ searchData, placeholder }) {
           </button>
         </div>
       </form>
+
       {groupedOptions.length > 0 ? (
         <Listbox {...getListboxProps()}>
           {groupedOptions.map((option, index) => {
-            // console.log(option);
             const artists = option.songs.reduce((accumulator, currentValue) => {
               accumulator.push(...currentValue.artists);
               return accumulator;
@@ -92,12 +90,12 @@ function Search({ searchData, placeholder }) {
 
             return (
               <li
+                key={option.slug}
                 className={styles.listElement}
                 {...getOptionProps({ option, index })}
               >
                 <div>
                   <p className={styles.albumTitle}>{option.title}</p>
-
                   <p className={styles.albumArtists}>
                     {truncate(artists.join(", "), 40)}
                   </p>
