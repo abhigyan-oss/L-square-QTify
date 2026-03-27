@@ -1,0 +1,22 @@
+.wrapper {
+    margin-top: 20px;
+  }
+  
+  .wrapper :global(.swiper) {
+    padding: 0 20px;
+  }
+  
+  .wrapper :global(.swiper-slide) {
+    width: auto;
+  }
+  
+  .wrapper :global(.swiper-button-prev),
+  .wrapper :global(.swiper-button-next) {
+    color: var(--color-primary);
+  }
+  
+  .wrapper :global(.swiper-button-prev::after),
+  .wrapper :global(.swiper-button-next::after) {
+    font-size: 24px;
+    font-weight: bold;
+  }

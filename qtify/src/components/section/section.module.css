@@ -13,6 +13,7 @@
   .collapse {
     color: var(--color-primary);
     cursor: pointer;
+    font-weight: 600;
   }
   
   .grid {
