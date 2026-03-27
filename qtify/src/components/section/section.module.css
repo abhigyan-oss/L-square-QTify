@@ -1,5 +1,5 @@
 .section {
-    padding: 20px;
+    padding: 20px 32px;
     background-color: var(--color-black);
   }
   
@@ -21,4 +21,23 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+  }
+  
+  .tabs {
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    color: var(--color-white) !important;
+    text-transform: none !important;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 14px !important;
+    min-width: auto !important;
+    padding-left: 0 !important;
+    padding-right: 24px !important;
+  }
+  
+  .tab[aria-selected="true"] {
+    color: var(--color-primary) !important;
   }

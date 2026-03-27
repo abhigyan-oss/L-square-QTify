@@ -9,6 +9,7 @@ function App() {
       <Hero />
       <Section title="Top Albums" type="top" />
       <Section title="New Albums" type="new" />
+      <Section title="Songs" type="songs" />
     </>
   );
 }
