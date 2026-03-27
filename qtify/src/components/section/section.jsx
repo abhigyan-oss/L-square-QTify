@@ -10,7 +10,7 @@ function Section({ title, type }) {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `https://qtify-backend.labs.crio.do/albums/${type}`
+            `https://qtify-backend.labs.crio.do/albums/${type}`
         );
         setData(res.data);
       } catch (err) {
